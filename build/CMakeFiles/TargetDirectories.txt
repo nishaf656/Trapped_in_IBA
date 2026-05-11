@@ -1,0 +1,3 @@
+C:/Users/User/Trapped_in_IBA/build/CMakeFiles/TrappedInIBA.dir
+C:/Users/User/Trapped_in_IBA/build/CMakeFiles/edit_cache.dir
+C:/Users/User/Trapped_in_IBA/build/CMakeFiles/rebuild_cache.dir

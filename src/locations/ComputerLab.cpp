@@ -1,10 +1,16 @@
 #include "ComputerLab.h"
-#include <iostream>
-using namespace std;
 
-Lab::Lab():Location("Lab","Computers everywhere") {}
+ComputerLab::ComputerLab(const std::string& labName, bool locked)
+    : Location("Computer Lab " + labName,
+               "Rows of desktop computers, all in sleep mode. "
+               "The AC is still running. A few screens glow faintly.",
+               locked),
+      labName(labName) {
+}
 
-void Lab::interact(Player &player) {
-    cout << "Used a computer. Energy -10\n";
-    player.reduceEnergy(10);
+std::string ComputerLab::onEnter() {
+    if (isLocked) {
+        return "Computer Lab " + labName + " is locked.\n" + lockReason;
+    }
+    return "You enter Computer Lab " + labName + ".\n" + description;
 }

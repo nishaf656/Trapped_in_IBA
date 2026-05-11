@@ -1,8 +1,13 @@
 #pragma once
 #include "Location.h"
 
-class Lab:public Location {
+// has PCs that might have useful files or emails
+class ComputerLab : public Location {
+private:
+    std::string labName;    // "Lab A" or "Lab B"
+
 public:
-    Lab();
-    void interact(Player &player) override;
+    ComputerLab(const std::string& labName, bool locked = false);
+
+    std::string onEnter() override;
 };
