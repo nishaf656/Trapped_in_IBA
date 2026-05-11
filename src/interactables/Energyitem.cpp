@@ -6,9 +6,7 @@ EnergyItem::EnergyItem(const std::string& name, const std::string& description, 
 energyRestore(energyRestore)
 {
     if (energyRestore <= 0.0f) {
-        throw InvalidDataError(
-            "EnergyItem '" + name + "': restore amount must be > 0. Got: " + std::to_string(energyRestore));
-    }
+        throw InvalidDataError( "EnergyItem '" + name + "': restore amount must be > 0. Got: " + std::to_string(energyRestore)); }
 }
 
 std::string EnergyItem::interact() {
