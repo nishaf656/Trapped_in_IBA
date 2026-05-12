@@ -3,7 +3,7 @@
 Cafeteria::Cafeteria(bool locked)
   : Location("Cafeteria",
              "The canteen is dark but the serving counter is visible. "
-             "There are some leftover samosas and chai from the evening. "
+             "There is some leftover chowmein and iced tea from the evening. "
              "Eating something here might restore your energy.",
              locked) {
   if (locked) {
